@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text: 1.5rem;
+  --head: calc(1rem + 5vw);
+  --bg-color: #f63b3e;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  
+}
+
+.burger-section {
+  min-height: 100vh;
+  background:linear-gradient(black,transparent),url("https://st2.depositphotos.com/2369859/9740/i/450/depositphotos_97407566-stock-photo-abstract-orange-background-light-yellow.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 2;
+  animation: slide 1s ease-in-out;
+  
+}
+img {
+  position: absolute;
+  width: 500px;
+  margin-top: 750px;
+  left: 1000px;
+  
+
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+  padding: 0rem 1.5rem;
+  color: white;
+  transform: translateY(-100%);
+  animation: movedown 850ms ease-in 1s forwards;
+
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+@keyframes movedown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin-left: 2rem;
+  font-size: var(--text);
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  border-bottom: 2px solid transparent;
+}
+
+.navbar ul li a:hover {
+  border-bottom: 2px solid var(--bg-color);
+}
+
+.burger-text {
+  position: relative;
+  color: rgb(255, 255, 255);
+  height:100%;
+  margin-top: 200px;
+  left: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+}
+
+.burger-text a {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  background: var(--bg-color);
+  font-weight: 900;
+  font-size: var(--text);
+  padding: 0.8rem 1rem;
+  margin: 0.8rem auto;
+  display: block;
+  margin-top: 200px;
+  left: 300px;
+  text-decoration: none;
+  transition: opacity 250ms linear;
+}
+
+ .burger-text a:hover {
+  opacity: 0.8;
+} 
+
+.burger-text h2 {
+  font-size: 4rem;
+}
+
+.burger-text p {
+  font-size: 2rem;
+}
